@@ -284,6 +284,10 @@
     text-decoration: line-through;
 }
 
+html, body{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: $font-family-poppins;
     background-color: $body-bg;
