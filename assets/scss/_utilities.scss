@@ -1,0 +1,294 @@
+@for $i from 1 through 100 {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      
+            .fs#{$infix}-#{$i} {
+                font-size: $i * 1px !important;
+            }
+
+            .text-truncate#{$infix}-#{$i}{
+                display: -webkit-box;
+                line-clamp: $i;
+                box-orient: vertical;
+                -webkit-line-clamp: $i;
+                -webkit-box-orient: vertical;
+                -ms-line-clamp: $i;
+                -ms-box-orient: vertical;
+                line-height: normal;
+                word-break: break-word;
+                // white-space: pre-wrap;
+                overflow: hidden;
+            }
+
+            @each $color, $value in $theme-colors {
+                .bg#{$infix}-#{$color}-lighten-#{$i}{
+                    background-color: lighten($value, $i * 1%);
+                }
+
+                .bg#{$infix}-#{$color}-darken-#{$i}{
+                    background-color: darken($value, $i * 1%);
+                }
+
+                .text#{$infix}-#{$color}-lighten-#{$i}{
+                    color: lighten($value, $i * 1%);
+                }
+
+                .text#{$infix}-#{$color}-darken-#{$i}{
+                    color: darken($value, $i * 1%);
+                }
+            }
+
+            .bg#{$infix}-dark-lighten-#{$i}{
+                background-color: lighten($dark, $i * 1%);
+            }
+
+            .bg#{$infix}-light-lighten-#{$i}{
+                background-color: lighten($light, $i * 1%);
+            }
+
+            .bg#{$infix}-dark-darken-#{$i}{
+                background-color: darken($dark, $i * 1%);
+            }
+
+            .bg#{$infix}-light-darken-#{$i}{
+                background-color: darken($light, $i * 1%);
+            }
+        }
+    }
+
+    .font-weight-#{$i * 100} {
+        font-weight: $i * 100 !important;
+    }
+
+    .line-height-#{$i} {
+        line-height: $i !important;
+    }
+
+    .line-height-#{$i}_5 {
+        line-height: $i * 1.5 !important;
+    }
+}
+
+@for $i from 1 through 9 {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      
+            @each $color, $value in $theme-colors {
+                .bg#{$infix}-#{$color}-opacity-0#{$i}{
+                    background-color: rgba($value, $i * 0.1);
+                }
+
+                .text#{$infix}-#{$color}-opacity-0#{$i}{
+                    color: rgba($value, $i * 0.1);
+                } 
+            }
+        }
+    }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        .justify-self#{$infix}-end {
+            justify-self: end;
+        }
+
+        @each $color, $value in $theme-colors {
+            .fill#{$infix}-#{$color}{
+                fill: $value;
+            }
+
+            .back-underline#{$infix}-#{$color}{
+                position: relative;
+                z-index: 0;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 5px;
+                    bottom: 10px;
+                    left: 0;
+                    background-color: $value;
+                    z-index: -1;
+                  }
+            }
+        }
+    }
+
+}
+
+.h-full{
+    height: 100%;
+}
+
+.btn-white{
+    @include button-variant($white, $white);
+}
+
+.btn-rounded{
+    border-radius: calc(38px / 2);
+
+    &.btn-lg{
+        border-radius: calc(48px / 2);
+    }
+
+    &.btn-sm{
+        border-radius: calc(31px / 2);
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+    
+    @include media-breakpoint-up(md) {
+        width: 80%;
+    }
+    
+    @include media-breakpoint-up(sm) {
+        width: 90%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1140px;
+        max-width: 1140px;
+    }
+}
+
+.wrapper-static {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.row {
+    margin: 0;
+}
+
+.text-black{
+    color: $black;
+}
+
+.text-gray-100 {
+    color: $gray-100;
+}
+
+.text-gray-200 {
+    color: $gray-200;
+}
+
+.text-gray-300 {
+    color: $gray-300;
+}
+
+.text-gray-400 {
+    color: $gray-400;
+}
+
+.text-gray-500 {
+    color: $gray-500;
+}
+
+.text-gray-600 {
+    color: $gray-600;
+}
+
+.text-gray-700 {
+    color: $gray-700;
+}
+
+.text-gray-800 {
+    color: $gray-800;
+}
+
+.text-gray-900 {
+    color: $gray-900;
+}
+
+.bg-gray-100 {
+    background-color: $gray-100;
+}
+
+.bg-gray-200 {
+    background-color: $gray-200;
+}
+
+.bg-gray-300 {
+    background-color: $gray-300;
+}
+
+.bg-gray-400 {
+    background-color: $gray-400;
+}
+
+.bg-gray-500 {
+    background-color: $gray-500;
+}
+
+.bg-gray-600 {
+    background-color: $gray-600;
+}
+
+.bg-gray-700 {
+    background-color: $gray-700;
+}
+
+.bg-gray-800 {
+    background-color: $gray-800;
+}
+
+.bg-gray-900 {
+    background-color: $gray-900;
+}
+
+.bg-facebook{
+    background-color: $facebook;
+}
+
+.bg-twitter{
+    background-color: $twitter;
+}
+
+.bg-instagram{
+    background-color: $instagram;
+}
+
+.bg-linkedin{
+    background-color: $linkedin;
+}
+
+.bg-telegram{
+    background-color: $telegram;
+}
+
+.bg-whatsapp{
+    background-color: $whatsapp;
+}
+
+.bg-youtube{
+    background-color: $youtube;
+}
+
+.bg-printer{
+    background-color: $printer;
+}
+
+
+.text-decoration-line-through{
+    text-decoration: line-through;
+}
+
+body{
+    font-family: $font-family-poppins;
+    background-color: $body-bg;
+    color: $body-color;
+}
+.page-content{
+    padding-top: 72px;
+}

@@ -1,0 +1,25 @@
+$font-family-poppins: 'Poppins', sans-serif;
+
+$body-bg: #ffffff;
+$body-color: #626262;
+
+$facebook: #3b5999;
+$twitter: #55acee;
+$instagram: #e4405f;
+$linkedin: #0077b5;
+$telegram: #3487c6;
+$whatsapp: #25d366;
+$youtube: #cd201f;
+$printer: #cd201f;
+
+$primary: #16619b;
+// $success: #3ae374;
+$secondary: #FFC05E;
+
+$theme-colors: (
+  primary: $primary,
+//   success: $success,
+  secondary: $secondary
+);
+
+$zindex-navbar: 5000;
