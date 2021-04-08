@@ -1,10 +1,14 @@
 .home-hero{
     width: 100%;
-    height: calc(100vh - (72px + 48px + .4rem));
+    // height: calc(100vh - (38px + .4rem));
+    height: calc(100vh - 38px);
     background-color: $primary;
+    padding-top: 72px;
+    position: relative;
+    z-index: 1;
     
     .home-hero-inner{
-        height: calc(100% - (48px + .4rem));
+        height: calc(100% - 38px);
         width: 100%;
         display: flex;
         align-items: center;
@@ -27,11 +31,11 @@
 
             .home-hero-item-decoration-screen{
                 width: 80%;
-                border-radius: 15px;
-                border: 15px solid $black;
+                border-radius: 10px;
+                border: 10px solid $gray-300;
                 overflow: hidden;
                 box-shadow: $box-shadow;
-                background-color: $black;
+                background-color: $gray-300;
 
                 img{
                     width: 100%;
@@ -44,13 +48,14 @@
     .home-hero-footer{
         width: 100%;
         display: flex;
-        height: calc(48px + .4rem);
+        height: 38px;
         justify-content: center;
         align-items: center;
     }
 
     @include media-breakpoint-down(md){
         height: unset;
+        padding: calc(72px + (#{$spacer}  * 2)) 0 calc(#{$spacer}  * 2) 0;
 
         .home-hero-inner{
             flex-direction: column;

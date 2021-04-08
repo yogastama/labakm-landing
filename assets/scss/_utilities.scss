@@ -84,6 +84,10 @@
                     color: rgba($value, $i * 0.1);
                 } 
             }
+
+            .bg#{$infix}-white-opacity-0#{$i}{
+                background-color: rgba($white, $i * 0.1);
+            }
         }
     }
 }
@@ -114,6 +118,37 @@
                     background-color: $value;
                     z-index: -1;
                   }
+            }
+
+            @keyframes water-flow-#{$color} {
+                0% {
+                    box-shadow: 0 0 0 0 rgba($value, 0.1), 0 0 0 10px rgba($value, 0.2),
+                    0 0 0 30px rgba($value, 0.2);
+                }
+                100% {
+                    box-shadow: 0 0 0 10px rgba($value, 0.2), 0 0 0 30px rgba($value, 0.2),
+                    0 0 0 50px rgba($value, 0);
+                }
+            }
+            
+            
+            @keyframes water-flow-#{$color}-sm {
+                0% {
+                  box-shadow: 0 0 0 0 rgba($value, 0.1), 0 0 0 10px rgba($value, 0.2),
+                    0 0 0 20px rgba($value, 0.2);
+                }
+                100% {
+                  box-shadow: 0 0 0 10px rgba($value, 0.2), 0 0 0 20px rgba($value, 0.2),
+                    0 0 0 30px rgba($value, 0);
+                }
+            }
+
+            .animation-water-flow#{$infix}-#{$color}{
+                animation: water-flow-#{$color} 1.9s linear infinite;
+            }
+            
+            .animation-water-flow#{$infix}-#{$color}-sm{
+                animation: water-flow-#{$color}-sm 1.9s linear infinite;
             }
         }
     }
@@ -146,7 +181,7 @@
 
 .wrapper {
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
     
     @include media-breakpoint-up(md) {
         width: 80%;
@@ -289,10 +324,11 @@ html, body{
 }
 
 body{
-    font-family: $font-family-poppins;
+    font-family: $font-family-nunito;
     background-color: $body-bg;
     color: $body-color;
 }
-.page-content{
-    padding-top: 72px;
-}
+
+// .page-content{
+//     padding-top: 72px;
+// }

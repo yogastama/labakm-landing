@@ -1,0 +1,38 @@
+.ui-decoration{
+    width: 100%;
+
+    .ui-decoration-phone{
+        width: 40%;
+        margin: 0 auto;
+        
+        .ui-decoration-phone-frame{
+            overflow: hidden;
+            border-radius: 27px;
+            width: 100%;
+            padding-top: 177.7777778%;
+            border: 10px solid $black;
+            position: relative;
+
+            &::before{
+                content: "";
+                height: 15px;
+                width: 15px;
+                position: absolute;
+                border-radius: 50%;
+                top: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $black;
+                z-index: 2;
+            }
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                // transform: translateX(-50%);
+                width: 100%;
+            }
+        }
+    }
+}
