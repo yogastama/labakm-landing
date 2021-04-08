@@ -37,9 +37,9 @@
             img{
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: -1px;
                 // transform: translateX(-50%);
-                width: 100%;
+                width: calc(100% + 2px);
             }
         }
     }
