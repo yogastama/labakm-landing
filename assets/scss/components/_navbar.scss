@@ -13,7 +13,7 @@
     &.scrolled{
         color: $body-color;
         box-shadow: $box-shadow-sm;
-        background-color: $white;
+        background-color: rgba($white, .8);
 
         .navbar-inner .navbar-menu .navbar-menu-inner .navbar-menu-list .navbar-menu-item,
         .navbar-inner .navbar-menu .navbar-menu-inner .navbar-menu-auth .navbar-menu-auth-item{

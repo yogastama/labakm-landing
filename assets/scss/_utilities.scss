@@ -131,7 +131,6 @@
                 }
             }
             
-            
             @keyframes water-flow-#{$color}-sm {
                 0% {
                   box-shadow: 0 0 0 0 rgba($value, 0.1), 0 0 0 10px rgba($value, 0.2),
@@ -143,12 +142,27 @@
                 }
             }
 
+            @keyframes water-flow-#{$color}-xs {
+                0% {
+                  box-shadow: 0 0 0 0 rgba($value, 0.1), 0 0 0 5px rgba($value, 0.2),
+                    0 0 0 10px rgba($value, 0.2);
+                }
+                100% {
+                  box-shadow: 0 0 0 5px rgba($value, 0.2), 0 0 0 10px rgba($value, 0.2),
+                    0 0 0 15px rgba($value, 0);
+                }
+            }
+
             .animation-water-flow#{$infix}-#{$color}{
                 animation: water-flow-#{$color} 1.9s linear infinite;
             }
             
             .animation-water-flow#{$infix}-#{$color}-sm{
                 animation: water-flow-#{$color}-sm 1.9s linear infinite;
+            }
+
+            .animation-water-flow#{$infix}-#{$color}-xs{
+                animation: water-flow-#{$color}-xs 1.9s linear infinite;
             }
         }
     }
