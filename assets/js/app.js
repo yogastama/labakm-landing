@@ -30,4 +30,10 @@ $(function () {
             fadeOut: true,
         });
     }
+
+    if ($("#home-paricle")) {
+        particlesJS.load('home-particle', 'assets/json/particles.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    }
 });
