@@ -2,6 +2,18 @@
     @each $breakpoint in map-keys($grid-breakpoints) {
         @include media-breakpoint-up($breakpoint) {
             $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+            .fs#{$infix}-#{$i} {
+                font-size: $i * 1px !important;
+            }
+
+            .w#{$infix}-#{$i} {
+                width: $i * 1px !important;
+            }
+
+            .h#{$infix}-#{$i} {
+                height: $i * 1px !important;
+            }
       
             .fs#{$infix}-#{$i} {
                 font-size: $i * 1px !important;
@@ -17,8 +29,19 @@
                 -ms-box-orient: vertical;
                 line-height: normal;
                 word-break: break-word;
-                // white-space: pre-wrap;
                 overflow: hidden;
+            }
+
+            .font-weight#{$infix}-#{$i * 100} {
+                font-weight: $i * 100 !important;
+            }
+        
+            .line-height#{$infix}-#{$i} {
+                line-height: $i !important;
+            }
+        
+            .line-height#{$infix}-#{$i}_5 {
+                line-height: $i * 1.5 !important;
             }
 
             @each $color, $value in $theme-colors {
@@ -97,6 +120,18 @@
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
         .justify-self#{$infix}-end {
             justify-self: end;
+        }
+
+        .w#{$infix}-full {
+            width: 100%;
+        }
+
+        .h#{$infix}-full {
+            height: 100%;
+        }
+
+        .overflow#{$infix}-y-auto{
+            overflow-y: auto;
         }
 
         @each $color, $value in $theme-colors {
@@ -339,6 +374,9 @@
     z-index: -1;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
 
 html, body{
     scroll-behavior: smooth;
