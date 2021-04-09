@@ -72,4 +72,35 @@ $(function () {
             $(e.target).closest('.card').removeClass('faq-active');
         });
     }
+
+    if ($("[data-content='discount-countdown']").length) {
+        var end = new Date($("[data-content='discount-countdown']").data('due'));
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var discountTimer;
+
+        const showRemaining = () => {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(discountTimer);
+                $("[data-content='discount-countdown']").remove();
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            $("[data-content='discount-days']").text(days < 10 ? `0${days}` : days);
+            $("[data-content='discount-hours']").text(hours < 10 ? `0${hours}` : hours);
+            $("[data-content='discount-minutes']").text(minutes < 10 ? `0${minutes}` : minutes);
+            $("[data-content='discount-seconds']").text(seconds < 10 ? `0${seconds}` : seconds);
+        }
+
+        discountTimer = setInterval(showRemaining, 1000);
+    }
 });
