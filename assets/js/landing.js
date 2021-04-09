@@ -63,4 +63,13 @@ $(function () {
             $("#ui-carousel").trigger("to.owl.carousel", [$('.ui-decoration-elements-circle-item-inner').index(this)]);
         });
     }
+
+    if ($("#faq-accordion")) {
+        $('#faq-accordion').on('show.bs.collapse', function (e) {
+            $("#faq-accordion .card").removeClass("faq-active");
+            $(e.target).closest('.card').addClass('faq-active');
+        }).on('hide.bs.collapse', function (e) {
+            $(e.target).closest('.card').removeClass('faq-active');
+        });
+    }
 });
