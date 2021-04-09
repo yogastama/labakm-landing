@@ -132,6 +132,40 @@
     padding-right: 30px;
     position: relative;
 
+    .item{
+        position: relative;
+        overflow: hidden;
+
+        &::before{
+            content: "";
+            height: 80px;
+            width: 80px;
+            background-color: darken($primary, 8%);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -10px;
+            left: -10px;
+            z-index: 1;
+        }
+
+        &::after{
+            content: "";
+            height: 150px;
+            width: 150px;
+            background-color: darken($primary, 8%);
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            z-index: 1;
+        }
+
+        *{
+            position: relative;
+            z-index: 2;
+        }
+    }
+
     .owl-dots {
         margin: 0;
         position: absolute;

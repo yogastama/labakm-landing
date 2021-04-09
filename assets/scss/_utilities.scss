@@ -115,6 +115,10 @@
             .bg#{$infix}-white-opacity-0#{$i}{
                 background-color: rgba($white, $i * 0.1);
             }
+
+            .text#{$infix}-white-opacity-0#{$i}{
+                color: rgba($white, $i * 0.1);
+            } 
         }
     }
 }
