@@ -67,3 +67,8 @@
         }
     }
 }
+
+.page-hero{
+    padding-top: calc(72px + (#{$spacer} * 1.5));
+    background-color: $primary;
+}

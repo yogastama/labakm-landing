@@ -103,4 +103,32 @@ $(function () {
 
         discountTimer = setInterval(showRemaining, 1000);
     }
+
+    if ($(".blog-carousel").length) {
+        $(".blog-carousel").owlCarousel({
+            loop: false,
+            margin: 15,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+    }
+
+    if (typeof AOS != 'undefined') {
+        AOS.init({
+            once: true,
+            duration: 1000,
+            offset: 0,
+        });
+    }
 });

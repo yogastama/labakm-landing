@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab AKM : Belajar AKM Online Mulai Dari Nol Rupiah</title>
-    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="assets/css/landing.min.css">
 </head>
 
 <body>
@@ -26,26 +26,23 @@
                                         <img src="assets/img/logo.png" alt="LabAKM">
                                     </div>
                                     <div class="navbar-menu-list">
-                                        <a href="#" class="navbar-menu-item">
+                                        <a href="index.html" class="navbar-menu-item">
                                             Beranda
                                         </a>
-                                        <a href="#section-pricing" class="navbar-menu-item">
-                                            Pricing
+                                        <a href="pricing.html" class="navbar-menu-item">
+                                            Paket
                                         </a>
-                                        <a href="#section-faq" class="navbar-menu-item">
-                                            FAQ
-                                        </a>
-                                        <a href="#section-testimony" class="navbar-menu-item">
+                                        <a href="testimony.html" class="navbar-menu-item">
                                             Testimonial
                                         </a>
-                                        <a href="#section-testimony" class="navbar-menu-item">
+                                        <a href=".blog.html" class="navbar-menu-item">
                                             Blog
                                         </a>
                                     </div>
                                     <div class="navbar-menu-auth">
-                                        <a href="" class="navbar-menu-auth-item">Masuk</a>
-                                        <a href=""
-                                            class="navbar-menu-auth-item bg-gray-200 text-black font-weight-700">Daftar</a>
+                                        <a href="login.html" class="navbar-menu-auth-item">Masuk</a>
+                                        <a href="register.html"
+                                            class="navbar-menu-auth-item bg-secondary text-white rounded font-weight-700">Daftar</a>
                                     </div>
                                 </div>
                             </div>
@@ -61,16 +58,16 @@
 
         <div class="page-content">
             <section id="section-breadcrumb">
-                <div class="bg-primary pt-5">
+                <div class="page-hero">
                     <div class="wrapper">
                         <div class="row">
                             <div class="col-12">
                                 <ul class="breadscrumbs">
                                     <li>
-                                        <a href="index.html">Home</a>
+                                        <a href="index.html">Beranda</a>
                                     </li>
                                     <li class="active">
-                                        <a href="contact.html">Pricing</a>
+                                        <a href="contact.html">Paket</a>
                                     </li>
                                 </ul>
                             </div>
@@ -82,27 +79,31 @@
                         d="M0,160L40,170.7C80,181,160,203,240,202.7C320,203,400,181,480,181.3C560,181,640,203,720,181.3C800,160,880,96,960,101.3C1040,107,1120,181,1200,186.7C1280,192,1360,128,1400,96L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
                     </path>
                 </svg>
-            </section>
-
-            <section id="section-pricing" class="mt-5">
-                <div class="wrapper my-5">
+                <div class="wrapper mt-3 mt-lg-n12">
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8 col-lg-5">
-                            <p class="mb-3 text-center">
-                                <span
-                                    class="py-1 px-5 text-primary bg-primary-opacity-02 fs-14 font-weight-700 rounded text-capitalize">
-                                    Pricing
-                                </span>
-                            </p>
-                            <h4 class="text-center text-black font-weight-700 fs-28 fs-md-36 line-height-1_5">
-                                Pilih <span class="back-underline-secondary">paket</span> sesuai kebutuhan.
-                            </h4>
+                            <div class="bg-white py-3 border-lg-normal rounded">
+                                <p class="mb-3 text-center">
+                                    <span
+                                        class="py-1 px-5 text-primary bg-primary-opacity-02 fs-14 font-weight-700 rounded text-capitalize">
+                                        Pricing
+                                    </span>
+                                </p>
+                                <h4 class="text-center text-black font-weight-700 fs-28 fs-md-36 line-height-1_5">
+                                    Pilih <span class="back-underline-secondary">paket</span> sesuai kebutuhan.
+                                </h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mt-5">
+                </div>
+            </section>
+
+            <section id="section-pricing" class="my-5">
+                <div class="wrapper">
+                    <div class="row">
                         <div class="col-12">
                             <div class="pricing">
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-sd mb-3">
                                             SD
@@ -111,10 +112,15 @@
                                     <p class="text-center text-uppercase font-weight-700 fs-16 fs-md-18 m-0">
                                         3 Bulan
                                     </p>
+                                    <p class="text-center font-weight-700 fs-14 my-2">
+                                        <span class="bg-danger-lighten-30 px-2 py-1 rounded text-danger">
+                                            <s>Rp25.999,99</s>
+                                        </span>
+                                    </p>
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -146,13 +152,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smp mb-3">
                                             SMP
@@ -164,7 +170,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -196,13 +202,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smak mb-3">
                                             SMA
@@ -211,10 +217,15 @@
                                     <p class="text-center text-uppercase font-weight-700 fs-16 fs-md-18 m-0">
                                         3 Bulan
                                     </p>
+                                    <p class="text-center font-weight-700 fs-14 my-2">
+                                        <span class="bg-danger-lighten-30 px-2 py-1 rounded text-danger">
+                                            <s>Rp25.999,99</s>
+                                        </span>
+                                    </p>
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -246,13 +257,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smak mb-3">
                                             SMK
@@ -264,7 +275,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -296,13 +307,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-sd mb-3">
                                             SD
@@ -314,7 +325,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -346,13 +357,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smp mb-3">
                                             SMP
@@ -364,7 +375,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -396,13 +407,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smak mb-3">
                                             SMA
@@ -414,7 +425,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -446,13 +457,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smak mb-3">
                                             SMK
@@ -464,7 +475,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -496,13 +507,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-sd mb-3">
                                             SD
@@ -514,7 +525,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -546,13 +557,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smp mb-3">
                                             SMP
@@ -564,7 +575,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -596,13 +607,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smak mb-3">
                                             SMA
@@ -614,7 +625,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -646,13 +657,13 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pricing-item shadow border">
+                                <div class="pricing-item border">
                                     <div class="pricing-level">
                                         <div class="pricing-level-inner pricing-level-smak mb-3">
                                             SMK
@@ -664,7 +675,7 @@
                                     <p class="text-center font-weight-700 fs-24 text-black m-0">
                                         Rp24.999,99
                                     </p>
-                                    <div class="pricing-inner mt-4">
+                                    <div class="pricing-inner my-4">
                                         <div class="pricing-inner-item fs-16 font-weight-600">
                                             <span class="pricing-inner-item-status fs-14 yes">
                                                 <i class="ri-check-fill"></i>
@@ -696,7 +707,7 @@
                                             Materi Tak Terbatas
                                         </div>
                                     </div>
-                                    <div class="pricing-action text-center mt-4">
+                                    <div class="pricing-action text-center mt-auto">
                                         <a href="" class="btn btn-primary btn-rounded px-4">
                                             Daftar Sekarang
                                         </a>
@@ -709,16 +720,150 @@
             </section>
         </div>
 
-        <footer>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
-                <path class="fill-primary" fill-opacity="1"
-                    d="M0,192L34.3,165.3C68.6,139,137,85,206,101.3C274.3,117,343,203,411,234.7C480,267,549,245,617,229.3C685.7,213,754,203,823,208C891.4,213,960,235,1029,208C1097.1,181,1166,107,1234,80C1302.9,53,1371,75,1406,85.3L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
-                </path>
-            </svg>
-            <div class="footer py-5">
+
+        <footer class="footer">
+            <div class="footer-inner mb-n5 mt-6">
                 <div class="wrapper">
                     <div class="row">
                         <div class="col-12">
+                            <div class="bg-white px-2 pt-4 pb-8">
+                                <div class="row">
+                                    <div class="col-6 col-md-3">
+                                        <p class="fs-18 font-weight-800 text-primary text-capitalize mb-3">
+                                            About Us
+                                        </p>
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Pengetahuan Dasar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tentang LabAKM
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tim Kami
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Sejarah
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <p class="fs-18 font-weight-800 text-primary text-capitalize mb-3">
+                                            About Us
+                                        </p>
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Pengetahuan Dasar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tentang LabAKM
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tim Kami
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Sejarah
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <p class="fs-18 font-weight-800 text-primary text-capitalize mb-3">
+                                            About Us
+                                        </p>
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Pengetahuan Dasar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tentang LabAKM
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tim Kami
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Sejarah
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <p class="fs-18 font-weight-800 text-primary text-capitalize mb-3">
+                                            About Us
+                                        </p>
+                                        <ul class="footer-list">
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Pengetahuan Dasar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tentang LabAKM
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Tim Kami
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="fs-16 font-weight-600">
+                                                    Sejarah
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-patent pb-4 pt-7">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <p class="fs-14 m-0 text-white text-center text-md-left">
+                                <a href=""
+                                    class="text-white mr-3 text-decoration-none d-inline-flex font-weight-700 fs-16">
+                                    Terms
+                                </a>
+                                <a href=""
+                                    class="text-white mr-3 text-decoration-none d-inline-flex font-weight-700 fs-16">
+                                    Privacy Policy
+                                </a>
+                                <a href="" class="text-white text-decoration-none d-inline-flex font-weight-700 fs-16">
+                                    Refund Policy
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <p class="fs-12 m-0 text-center text-md-right text-white">
+                                Copyright &copy; 2021 <span class="font-weight-700">LabAKM</span> All Rights Reserved.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -731,7 +876,7 @@
     <script src="assets/vendor/popper-2.9.1/popper.min.js"></script>
     <script src="assets/vendor/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/landing.js"></script>
 </body>
 
 </html>

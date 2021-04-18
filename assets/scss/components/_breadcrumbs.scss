@@ -28,12 +28,12 @@
 		}
 
 		&.active a {
-			font-weight: 700;
+			color: $white !important;
 		}
 
 		a {
 			text-decoration: none;
-			color: $white !important;
+			color: darken($white, 20%) !important;
 		}
 	}
 }
