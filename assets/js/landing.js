@@ -29,13 +29,13 @@ $(function () {
         });
     }
 
-    if ($("#home-paricle")) {
+    if ($("#home-paricle").length) {
         particlesJS.load('home-particle', 'assets/json/particles.json', function () {
             console.log('callback - particles.js config loaded');
         });
     }
 
-    if ($("#ui-carousel")) {
+    if ($("#ui-carousel").length) {
         $("#ui-carousel").owlCarousel({
             loop: true,
             margin: 30,
@@ -64,7 +64,7 @@ $(function () {
         });
     }
 
-    if ($("#faq-accordion")) {
+    if ($("#faq-accordion").length) {
         $('#faq-accordion').on('show.bs.collapse', function (e) {
             $("#faq-accordion .card").removeClass("faq-active");
             $(e.target).closest('.card').addClass('faq-active');
@@ -129,6 +129,32 @@ $(function () {
             once: true,
             duration: 1000,
             offset: 0,
+        });
+    }
+
+    if ($("#blog-search-input").length) {
+        const searchPlaceholders = [
+            "Tips Mengerjakan AKM",
+            "Jenis-Jenis Soal AKM",
+            "Info AKM",
+            "Cara Cepat Pengerjaan AKM",
+        ];
+
+        const searchPlaceholder = setInterval(() => {
+            $("#blog-search-input").attr("placeholder", "Cari " + searchPlaceholders[Math.floor(Math.random() * searchPlaceholders.length)]);
+        }, 5000);
+
+        searchPlaceholder;
+    }
+
+    if ($(".blog-jumbotron-carousel").length) {
+        $('.blog-jumbotron-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: true,
+            items: 1,
+            autoplay: true
         });
     }
 });

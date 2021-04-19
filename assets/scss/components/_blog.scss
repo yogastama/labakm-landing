@@ -5,6 +5,11 @@
   .blog-item {
     margin: $spacer * 0.5;
     width: calc((100% / 4) - #{$spacer});
+
+    @include media-breakpoint-down(md) {
+      margin: $spacer * 0.25;
+      width: calc((100% / 2) - #{$spacer} * 0.5);
+    }
   }
 }
 
@@ -87,5 +92,277 @@
 
   .blog-item-inner {
     padding: $spacer;
+
+    .blog-inner-link {
+      transition: 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        color: $gray-600 !important;
+      }
+    }
+  }
+}
+
+.blog-search {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  input {
+    border: none;
+    outline: none;
+    width: calc(100% - 45px);
+    background-color: $gray-200;
+    padding: 0 $spacer;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    height: 45px;
+    width: 45px;
+    background-color: $primary;
+    color: $white;
+    font-size: 21px;
+  }
+}
+
+.blog-jumbotron {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .blog-jumbotron-item:nth-child(1) {
+    width: calc(65% - 10px);
+
+    .blog-jumbotron-carousel {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      border-radius: $border-radius;
+      overflow: hidden;
+
+      .owl-stage-outer {
+        height: 100%;
+        width: 100%;
+
+        .owl-stage {
+          height: 100%;
+          width: 100%;
+
+          .owl-item {
+            height: 100%;
+            width: 100%;
+
+            .item {
+              overflow: hidden;
+              height: 100%;
+              width: 100%;
+              position: relative;
+
+              .item-image {
+                position: relative;
+                width: auto;
+                height: 100%;
+                overflow: hidden;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background: linear-gradient(
+                    0deg,
+                    black 5%,
+                    rgba(0, 0, 0, 0) 100%
+                  );
+                }
+
+                img {
+                  height: 100%;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+
+              .item-caption {
+                position: absolute;
+                bottom: 0;
+                padding: 20px;
+                display: block;
+                overflow: hidden;
+                color: $white;
+                font-family: PoppinsBold, sans-serif;
+                font-size: 26px;
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .owl-dots {
+        display: inline-flex;
+        flex-direction: column;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+
+        .owl-dot {
+          outline: none !important;
+          span {
+            background-color: rgba($white, 0.3);
+            transition: all 0.5s;
+          }
+
+          &.active span,
+          &:hover span {
+            background-color: $white;
+          }
+
+          &.active span {
+            height: 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .blog-jumbotron-item:nth-child(2) {
+    width: calc(35% - 10px);
+
+    .blog-jumbotron-trending {
+      width: 100%;
+      border-radius: $border-radius;
+      overflow: hidden;
+      position: relative;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      .blog-trending-image {
+        width: 100%;
+        height: 0;
+        padding-bottom: 55.6%;
+        position: relative;
+        overflow: hidden;
+        background-color: $black;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(0deg, black 5%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        img {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .blog-trending-caption {
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        display: block;
+        overflow: hidden;
+        color: $white;
+        font-family: PoppinsBold, sans-serif;
+        transition: 0.3s;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    justify-content: unset;
+
+    .blog-jumbotron-item:nth-child(1) {
+      width: 100%;
+      height: 0 !important;
+      margin-bottom: 20px;
+      padding-bottom: 55.6%;
+      position: relative;
+
+      .blog-jumbotron-carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .owl-stage-outer .owl-stage .owl-item .item .item-caption {
+          font-size: 18px;
+          bottom: 10px;
+        }
+
+        .owl-dots {
+          display: block;
+          flex-direction: unset;
+          position: absolute;
+          left: 0;
+          top: unset;
+          bottom: 5px;
+          width: 100%;
+          transform: translateY(0);
+
+          .owl-dot {
+            outline: none !important;
+            span {
+              background-color: rgba($white, 0.3);
+              transition: all 0.5s;
+              margin: 0 3px;
+            }
+
+            &.active span,
+            &:hover span {
+              background-color: $white;
+            }
+
+            &.active span {
+              height: 10px !important;
+              width: 20px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .blog-jumbotron-item:nth-child(2) {
+      width: 100%;
+
+      .blog-jumbotron-trending {
+        .blog-trending-image {
+          padding-bottom: 40%;
+        }
+      }
+    }
   }
 }

@@ -452,9 +452,10 @@ body {
   color: $body-color;
 }
 
-// .page-content{
-//     padding-top: 72px;
-// }
+.page-content {
+  overflow: hidden;
+  width: 100%;
+}
 
 .loading-more {
   position: relative;
