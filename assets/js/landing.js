@@ -108,8 +108,8 @@ $(function () {
         $(".blog-carousel").owlCarousel({
             loop: false,
             margin: 15,
-            nav: true,
-            dots: false,
+            nav: false,
+            dots: true,
             responsive: {
                 0: {
                     items: 1

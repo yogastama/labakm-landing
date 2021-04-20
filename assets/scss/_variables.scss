@@ -1,4 +1,4 @@
-$font-family-nunito: "Nunito", sans-serif;
+$font-family-nunito: "Nunito Sans", sans-serif;
 
 $body-bg: #ffffff;
 $body-color: #626262;
@@ -64,5 +64,7 @@ $spacers: map-merge(
   ),
   $spacers
 );
+
+$border-radius-lg: 0.625rem;
 
 $zindex-navbar: 5000;
