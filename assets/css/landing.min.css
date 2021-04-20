@@ -125493,6 +125493,7 @@ body {
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   position: relative;
+  flex-wrap: wrap;
 }
 .testimony-item::before {
   content: "";
@@ -125515,7 +125516,12 @@ body {
 .testimony-item .testimony-image {
   width: 140px;
   flex-shrink: 0;
-  margin-right: 1rem;
+}
+@media (max-width: 767.98px) {
+  .testimony-item .testimony-image {
+    margin: 0 auto;
+    width: 120px;
+  }
 }
 .testimony-item .testimony-image .testimony-image-inner {
   width: 100%;
@@ -125532,6 +125538,17 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.testimony-item .testimony-inner {
+  margin-left: 1rem;
+  width: calc((100% - 140px) - 1rem);
+}
+@media (max-width: 767.98px) {
+  .testimony-item .testimony-inner {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }
 
 .banner-login-for-more {

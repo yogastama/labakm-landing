@@ -20,6 +20,7 @@
   border: 1px solid $gray-300;
   border-radius: $border-radius;
   position: relative;
+  flex-wrap: wrap;
 
   &::before {
     content: "\ec52";
@@ -44,7 +45,11 @@
   .testimony-image {
     width: 140px;
     flex-shrink: 0;
-    margin-right: $spacer;
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto;
+      width: 120px;
+    }
 
     .testimony-image-inner {
       width: 100%;
@@ -62,6 +67,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  .testimony-inner {
+    margin-left: $spacer;
+    width: calc((100% - 140px) - #{$spacer});
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-top: $spacer;
+      width: 100%;
     }
   }
 }
